@@ -24,6 +24,8 @@ jobs:
       - run:
           name: Push to dockerhub
           command: |
+            docker images
+
             docker login -u $DOCKERHUB_USER -p $DOCKERHUB_PASSWD
 
             docker tag web $DOCKERHUB_USER/$DOCKERHUB_REPO:latest
