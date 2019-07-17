@@ -39,7 +39,7 @@ jobs:
          command: |
             pip install awsebcli --upgrade
 
-            sed -ie "s/:latest/circle-${CIRCLE_BUILD_NUM}/" .circleci/Dockerrun.aws.json
+            sed -i "s/:latest/circle-${CIRCLE_BUILD_NUM}/" .circleci/Dockerrun.aws.json
             cd .circleci/
 
             if ! test -f ".elasticbeanstalk/config.yml"; then

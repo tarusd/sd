@@ -1,7 +1,7 @@
 {
   "AWSEBDockerrunVersion": "1",
   "Image": {
-    "Name": "taru0216/sd11",
+    "Name": "taru0216/sd11:latest",
     "Update": "true"
   },
   "Ports": [
