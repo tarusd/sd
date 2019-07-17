@@ -40,8 +40,8 @@ jobs:
             pip install awsebcli --upgrade
 
             if ! test -f ".elasticbeanstalk/config.yml"; then
-              echo "" | eb init tarusd-sd -v -r ap-northeast-1
+              echo -e "\n\n" | eb init tarusd-sd -v -r ap-northeast-1
             fi
             
-            eb use tarusd-sd
+            eb use tarusd-sd-stg
             eb deploy -l circle-${CIRCLE_BUILD_NUM}
