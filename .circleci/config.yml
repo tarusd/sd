@@ -21,3 +21,8 @@ jobs:
           name: Run tests
           command: |
             cd series7/test && docker-compose up test
+      - run:
+          name: Push to dockerhub
+          command: |
+            docker login -u $DOCKERHUB_USER -p $DOCKERHUB_PASSWD
+            docker push $DOCKERHUB_USER/$DOCKERHUB_REPO
