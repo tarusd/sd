@@ -39,8 +39,8 @@ jobs:
          command: |
             pip install awsebcli --upgrade
 
-            sed -ie "s/:latest/circle-${CIRCLE_BUILD_NUM}/" .circle/Dockerrun.aws.json
-            cd .circle/
+            sed -ie "s/:latest/circle-${CIRCLE_BUILD_NUM}/" .circleci/Dockerrun.aws.json
+            cd .circleci/
 
             if ! test -f ".elasticbeanstalk/config.yml"; then
               echo -e "\n\n" | eb init tarusd-sd -v -r ap-northeast-1
