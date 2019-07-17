@@ -28,8 +28,8 @@ jobs:
 
             docker login -u $DOCKERHUB_USER -p $DOCKERHUB_PASSWD
 
-            docker tag web $DOCKERHUB_USER/$DOCKERHUB_REPO:latest
+            docker tag test_web $DOCKERHUB_USER/$DOCKERHUB_REPO:latest
             docker push $DOCKERHUB_USER/$DOCKERHUB_REPO:latest
 
-            docker tag web $DOCKERHUB_USER/$DOCKERHUB_REPO:circle-${CIRCLE_BUILD_NUM}
+            docker tag test_web $DOCKERHUB_USER/$DOCKERHUB_REPO:circle-${CIRCLE_BUILD_NUM}
             docker push $DOCKERHUB_USER/$DOCKERHUB_REPO:circle-${CIRCLE_BUILD_NUM}
